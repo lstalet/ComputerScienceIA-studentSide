@@ -26,14 +26,18 @@
 
     <div class="container">
         <div class="create-box">
-          <h2 style="text-align: center; color: Oblack;">Create Flashcard</h2>
-          <label for="question">Question</label>
-          <textarea id="question"></textarea>
-          <br>
-          <label for="answer">Answer</label>
-          <textarea id="answer"></textarea>
+          <h2 style="text-align: center; color: Oblack;">Translate Flashcards</h2>
+          <h3>Choose translating language</h3>
+          <div id="google_translate_element"></div>
+
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+          </script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           <div>
-            <button onclick="addFlashcard()">Save</button>
             <button onclick="hideCreateBox()">Close</button>
           </div>
         </div>
