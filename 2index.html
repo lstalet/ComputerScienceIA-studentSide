@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="flashcard.png" />
+  <link rel="stylesheet" href="2style.css">
+  <title class="notranslate">Flashcards - Students</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+          <div class="nav">
+            <h1 class="notranslate">Flashcards - Students</h1>
+            <div>
+              <h2 class="notranslate"><a href="https://lstalet.github.io/ComputerScienceIA-teacherSide/">Switch to the Teacher's Version</a></h2>
+            </div>
+            <div>
+                <button onclick="showCreateCardBox()" class="notranslate">Add a Flashcard</button>
+                <button onclick="showTranslationBox()" class="notranslate">Translating Menu</button>
+                <button onclick="delFlashcards()" class="notranslate">Del Cards</button>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="translation-box">
+          <h2 style="text-align: center; color: Oblack;" class="notranslate">Translate Flashcards</h2>
+          <h3 class="notranslate">Choose translating language</h3>
+          <div id="google_translate_element"></div>
+
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+          </script>
+
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          <div>
+            <button onclick="hideTranslationBox()" class="notranslate">Close</button>
+          </div>
+        </div>
+        <div class="create-box">
+          <h2 style="text-align: center; color: Oblack;">Create Flashcard</h2>
+          <label for="question">Question</label>
+          <textarea id="question"></textarea>
+          <br>
+          <label for="answer">Answer</label>
+          <textarea id="answer"></textarea>
+          <div>
+            <button onclick="addFlashcard()">Save</button>
+            <button onclick="hideCreateBox()">Close</button>
+          </div>
+        </div>
+        <div class="flashcards"></div>
+    </div>
+    
+
+  <script src="2script.js"></script>
+</body>
+</html>
